@@ -1,20 +1,20 @@
 # Asset-Allocation-Risk-Parity
 
-Here I replicated the paper "Leverage Aversion and Risk Parity" by Cliord S. Asness, Andrea Frazzini, and Lasse H. Pedersen (2012, Financial Analysts Journal, Volumne 68, Number 1).
+I replicated the paper "Leverage Aversion and Risk Parity" by Cliord S. Asness, Andrea Frazzini, and Lasse H. Pedersen (2012, Financial Analysts Journal, Volumne 68, Number 1).
 
 Problem 1
-I retrieve data from WRDS in the section CRSP > Annual Update> Treasuries > CRSP TREASURIES - Issue Descriptions and Monthly Time Series. My time period is from Jan 1926 to Dec 2018. I use monthly data. I retrieve the variables specified in assignment. 
-I exclude entries with returns -99.  I exclude rows where we have missing data in at least one column.
+I retrieve the data from WRDS in the section CRSP > Annual Update> Treasuries > CRSP TREASURIES - Issue Descriptions and Monthly Time Series. My time period is from Jan 1926 to Dec 2018. I use monthly data. 
+I exclude entries with returns -99 and   rows where we have missing data in at least one column.
 I define weights of bond value weighted return as lagged capitalization of the firm divided by lagged total market capitalization. Then I found value weighted return of the market in each month by multiplying weights of the company by its return and summing it up under every month.
 
 
 Problem 2
-I retrieve data from WRDS in the section CRSP > Annual Update> Index / Treasury and Ination > US Treasury and Inflation Indexes. My time period is from Jan 1926 to Dec 2018. I use monthly data. I retrieve the variables specified in assignment
+I retrieve the data from WRDS in the section CRSP > Annual Update> Index / Treasury and Ination > US Treasury and Inflation Indexes. My time period is from Jan 1926 to Dec 2018. I use monthly data. 
 I find excess return of bonds and stocks as : value weighted return of bond/stock on particular month minus 30 day risk free rate.
 
 
 Problem 3
-I use data from the previous problem sets. 
+
 I define Excess value weighted return on each month as excess stock return multiplied by total stock lagged capitalization and divided by (total stock lagged capitalization+ total bond lagged capitalization)
 I define 60/40 portfolio as 0.6*excess stock return + 0.4 excess bond return for each month.
 I find stock/bond inverse sigma as one divided 3 year rolling standard deviation of excess return series. 
